@@ -1,0 +1,2 @@
+rocketstation_Data/StreamingAssets/version.ini
+rocketstation_Data/Managed/Assembly-CSharp.dll
