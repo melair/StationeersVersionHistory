@@ -73,9 +73,10 @@ fi
 # and start the process of uploading and invalidating CloudFront. Putting
 # CloudFront infront of S3 reduces bandwidth costs.
 if [ -n "$(git status --porcelain)" ]; then
-  Add to git.
+  # Add to git.
   git add .
   git commit -am "Polled update changes."
+  git push
 
   # Push new files to S3.
   aws s3 sync . s3://$S3BUCKET
