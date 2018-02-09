@@ -14,6 +14,12 @@ class About extends Component {
           <li><a href="//data.stationeers.melaircraft.net/public.atom">Public Version History (ATOM)</a></li>
           <li><a href="//data.stationeers.melaircraft.net/beta.atom">Beta Version History (ATOM)</a></li>
         </ul>
+        <h3>Source</h3>
+        <p>If you'd like to see the history of version data, or help contribute to this project you can access it at GitHub!</p>
+        <ul>
+          <li><a href="https://github.com/melair/StationeersVersionHistory">Frontend and Backend Source</a></li>
+          <li><a href="https://github.com/melair/StationeersVersionHistoryData">Versioned Version Data</a></li>
+        </ul>
         <h3>Credits</h3>
         <p>Any questions, feel free to get in touch.</p>
         <dl>
