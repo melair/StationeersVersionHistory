@@ -14,7 +14,7 @@ abort "Branch is neither public or beta." unless [ "public", "beta" ].include? b
 rss = RSS::Maker.make("atom") do |m|
   m.channel.author = "Melair"
   m.channel.updated = Time.now
-  m.channel.about = "http://stationeers.melaircraft.com"
+  m.channel.about = "http://stationeers.melaircraft.net"
   m.channel.title = "Stationeers Version History - Branch: #{branch}"
 
   versions = version.keys.select { |k| version[k]["releases"].has_key? branch }[0,10]
