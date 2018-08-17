@@ -66,12 +66,6 @@ end
 
 notes = parse_release_notes notes_raw
 
-top_note = notes[0]
-
-top_note["notes"] = ["*** https://stationeers.melaircraft.com is being decomissioned, please see https://stationeering.com/tools/data for a replacement feed. ***"] + top_note["notes"]
-
-notes[0] = top_note
-
 all = { "current" => version_data, "history" => notes }
 
 puts JSON.pretty_generate(all)
