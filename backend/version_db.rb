@@ -62,6 +62,8 @@ if version[release_version]["releases"][branch] == "unknown"
   version[release_version]["releases"][branch] = Time.now.iso8601
 end
 
+version["9.9.9.9"] = [ { "notes" => [ "https://stationeers.melaircraft.net will stop updating on the 30th of August 2018.", "If you are consuming our raw JSON, you can find a replacement at: https://stationeering.com/tools/data", "If you are consuming our ATOM feed, you can find a replacement on: https://stationeering.com/versions/recent" ], "releases" => { "built" => "unknown", "beta" => "unknown", "public" => "unknown" } }] + version_sorted
+
 # Turn a quad version into a number, for ordering purposes.
 def ver_to_i version
   split_version = version.split "."
