@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import History from './History';
-import About from './About';
 
 class App extends Component {
+  componentWillMount(){
+    window.location = "https://stationeering.com/versions/recent";
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <About />
-        <History />
+        <h1>Redirecting...</h1>
       </div>
     );
   }
