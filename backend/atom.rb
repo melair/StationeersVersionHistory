@@ -14,15 +14,16 @@ abort "Branch is neither public or beta." unless [ "public", "beta" ].include? b
 rss = RSS::Maker.make("atom") do |m|
   m.channel.author = "Melair"
   m.channel.updated = Time.now
-  m.channel.about = "http://stationeers.melaircraft.com"
+  m.channel.about = "https://stationeers.melaircraft.com/"
   m.channel.title = "Stationeers Version History - Branch: #{branch}"
 
   versions = version.keys.select { |k| version[k]["releases"].has_key? branch }[0,10]
 
   versions.each do |v|
     m.items.new_item do |item|
-      item.id = "urn:stationeers_version:#{v}"
+      item.id = "urn:stationeers-version:#{v}"
       item.title = v
+      item.link = "https://stationeers.melaircraft.com/##{v}"
       item.content.type = "xhtml"
 
       representation = version[v]["notes"].map { |l| "<li>#{CGI.escapeHTML(l)}</li>" }.join("")
